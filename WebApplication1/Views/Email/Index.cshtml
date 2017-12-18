@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    @if (ViewBag.Error != null){
+       <h1>@ViewBag.Error</h1> 
+    }
+
+    <form action="Index" method="post">
+        <span class="form-control-static">Receiver Email</span>
+        <input class="form-control" type="text" name="ReceiverEmail" />
+        <span class="form-control-static">Subject</span>
+        <input class="form-control" type="text" name="Subject" />
+        <span class="form-control-static">Message</span>
+        <input class="form-control" type="text" name="Message" />
+        <br />
+        <br />
+        <button class="btn btn-danger" type="submit">Send Email</button>
+    </form>
+</div>
